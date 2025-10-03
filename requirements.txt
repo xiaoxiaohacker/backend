@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+mysqlclient
+pydantic
+python-jose
+passlib[bcrypt]
+celery
+redis
+netmiko
