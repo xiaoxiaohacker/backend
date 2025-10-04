@@ -8,3 +8,4 @@ passlib[bcrypt]
 celery
 redis
 netmiko
+pysnmp

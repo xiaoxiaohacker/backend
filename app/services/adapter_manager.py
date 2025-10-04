@@ -1,8 +1,9 @@
 from typing import Dict, Any
 from app.adapters.base import BaseAdapter
-from app.adapters.huawei import HuaweiAdapter
 from app.adapters.h3c import H3CAdapter
+from app.adapters.huawei import HuaweiAdapter
 from app.adapters.ruijie import RuijieAdapter
+from app.adapters.snmp import SNMPAdapter
 
 
 class AdapterManager:
@@ -12,7 +13,8 @@ class AdapterManager:
     _adapters = {
         'huawei': HuaweiAdapter,
         'h3c': H3CAdapter,
-        'ruijie': RuijieAdapter
+        'ruijie': RuijieAdapter,
+        'snmp': SNMPAdapter
     }
     
     @classmethod

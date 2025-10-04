@@ -5,6 +5,7 @@ from .auth import router as auth_router
 from .backup_tasks import router as backup_tasks_router
 from .test_root import router as test_root_router
 from .device_stats import router as device_stats_router
+from .alerts import router as alerts_router
 
 __all__ = [
     "dashboard_router",
@@ -12,5 +13,6 @@ __all__ = [
     "auth_router",
     "backup_tasks_router",
     "test_root_router",
-    "device_stats_router"
+    "device_stats_router",
+    "alerts_router"
 ]

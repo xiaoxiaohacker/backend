@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 from fastapi.openapi.utils import get_openapi
 from app.services.db import Base, engine
-from app.api.v1 import auth_router, devices_router, backup_tasks_router, dashboard_router, test_root_router, device_stats_router
+from app.api.v1 import auth_router, devices_router, backup_tasks_router, dashboard_router, test_root_router, device_stats_router, alerts_router
 from app.new_dashboard import router as new_dashboard_router
 import os
 import json
@@ -63,6 +63,7 @@ app.include_router(dashboard_router, prefix="/api/dashboard", tags=["Dashboard"]
 app.include_router(test_root_router, tags=["Test"])
 app.include_router(new_dashboard_router, tags=["New Dashboard"])
 app.include_router(device_stats_router, prefix="/api/v1/device-stats", tags=["Device Statistics"])
+app.include_router(alerts_router, prefix="/api/v1/alerts", tags=["Alerts"])
 
 # Simple ping endpoint
 @app.get("/ping")
